@@ -48,7 +48,7 @@
             a {
               text-decoration: none;
               color: $white-text-color;
-
+              
               &:focus,
               &:hover {
                 color: var(--main-item-hover-color-new);
@@ -61,3 +61,29 @@
   }
 }
 
+// Active link styles when hash matches
+$menu-hashes: (
+  'preferences-theme',
+  'preferences-entities',
+  'preferences-language-region',
+  'my-profile-personal-info',
+  'my-profile-password-security',
+  'my-profile-notifications-alerts',
+  'data-import',
+  'data-export',
+  'convert-data',
+  'users',
+  'roles-permissions',
+  'modules',
+);
+
+@each $hash in $menu-hashes {
+  ##{$hash} {
+    .general-menu-tree,
+    .staff-menu-tree {
+      a[href="##{$hash}"] {
+        color: var(--main-item-hover-color-new) !important;
+      }
+    }
+  }
+}

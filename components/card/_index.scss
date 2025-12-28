@@ -1,5 +1,6 @@
-.settings-card.settings-small-card {
+.settings-card {
   height: 100%;
+  width: 100%;
   padding: 1.5em;
 
   .p-card-body {
@@ -66,6 +67,43 @@
     .p-togglebutton {
       font-size: 10px;
       padding: 5px 10px;
+    }
+  }
+
+  .settings-card-group {
+    margin-bottom: 2rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .settings-card-group-title {
+      margin: 0 0 1rem;
+      font-size: 1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .settings-card-item-list {
+      display: grid !important;
+      grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+      gap: 1rem;
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      box-sizing: border-box;
+
+      li {
+        border: 1px solid $p-card-border;
+        border-radius: $small-border-radius;
+        padding: 0.5rem 1rem !important;
+        box-sizing: border-box;
+        min-width: 0;
+        overflow: hidden;
+      }
     }
   }
 }
