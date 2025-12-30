@@ -93,7 +93,7 @@ $items: (
     .general-menu-tree,
     .staff-menu-tree {
       a[href="##{$item}"] {
-        color: var(--main-item-color-new) !important;
+        color: var(--main-item-color-user) !important;
       }
     }
   }

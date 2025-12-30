@@ -51,7 +51,7 @@
               
               &:focus,
               &:hover {
-                color: var(--main-item-hover-color-new);
+                color: var(--main-item-hover-color-user);
               }
             }
           }
@@ -82,7 +82,7 @@ $menu-hashes: (
     .general-menu-tree,
     .staff-menu-tree {
       a[href="##{$hash}"] {
-        color: var(--main-item-hover-color-new) !important;
+        color: var(--main-item-hover-color-user) !important;
       }
     }
   }
