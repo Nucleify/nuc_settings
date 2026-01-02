@@ -1,0 +1,41 @@
+import type { SettingsGroupInterface } from 'atomic'
+
+export function modulesGroups(
+  withCategory: boolean = false
+): SettingsGroupInterface[] {
+  return [
+    {
+      name: 'nuc_activity',
+      items: ['Activity'],
+    },
+    {
+      name: 'nuc_entities',
+      items: [withCategory && 'Entities', 'Article', 'Contact', 'Money'].filter(
+        Boolean
+      ) as string[],
+    },
+    {
+      name: 'nuc_entities_structural',
+      items: [
+        withCategory && 'Structural',
+        'Card',
+        'Feature',
+        'Link',
+        'Question',
+        'Technology',
+      ].filter(Boolean) as string[],
+    },
+    {
+      name: 'nuc_documentation',
+      items: ['Documentation'],
+    },
+    {
+      name: 'nuc_files',
+      items: ['File'],
+    },
+    {
+      name: 'nuc_tasks',
+      items: ['Task'],
+    },
+  ]
+}
