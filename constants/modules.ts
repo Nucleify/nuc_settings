@@ -26,10 +26,6 @@ export function modulesGroups(
       ].filter(Boolean) as string[],
     },
     {
-      name: 'nuc_documentation',
-      items: ['Documentation'],
-    },
-    {
       name: 'nuc_files',
       items: ['File'],
     },
