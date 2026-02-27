@@ -16,22 +16,13 @@ export function modulesGroups(
     },
     {
       name: 'nuc_entities_structural',
-      items: [
-        withCategory && 'Structural',
-        'Card',
-        'Feature',
-        'Link',
-        'Question',
-        'Technology',
-      ].filter(Boolean) as string[],
+      items: [withCategory && 'Structural', 'Question', 'Technology'].filter(
+        Boolean
+      ) as string[],
     },
     {
       name: 'nuc_files',
       items: ['File'],
-    },
-    {
-      name: 'nuc_tasks',
-      items: ['Task'],
     },
   ]
 }
