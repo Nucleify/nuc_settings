@@ -1,26 +1,31 @@
 <template>
   <div class="staff-menu-tree">
-    <ad-heading :tag="4" text="Staff" />
+    <ad-heading :tag="4" :text="t('settings-staff')" />
     <ad-tree :value="nodes" :expanded-keys="expandedKeys" />
   </div>
 </template>
 
 <script setup>
-const nodes = ref([
+import { computed, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
+
+const nodes = computed(() => [
   {
     key: '0',
-    label: 'Security',
+    label: t('settings-security'),
     children: [
       {
         key: '0-0',
-        label: 'Users & Access',
+        label: t('settings-users-access'),
         data: '#users',
         type: 'url',
         class: 'disabled-item',
       },
       {
         key: '0-1',
-        label: 'Roles & Permissions',
+        label: t('settings-roles-permissions'),
         data: '#roles-permissions',
         type: 'url',
         class: 'disabled-item',
@@ -29,7 +34,7 @@ const nodes = ref([
   },
   {
     key: '1',
-    label: 'Modules',
+    label: t('settings-modules'),
     type: 'url',
     data: '#modules',
   },

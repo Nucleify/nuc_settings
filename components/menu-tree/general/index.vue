@@ -1,6 +1,6 @@
 <template>
   <div class="general-menu-tree">
-    <ad-heading :tag="4" text="General" >
+    <ad-heading :tag="4" :text="t('settings-general')" >
       <nuc-navigation-back-button 
         v-if="route.hash.includes('#module-')"
         ad-type="main"
@@ -12,23 +12,26 @@
 
 <script setup lang="ts">
 import { useRoute } from 'nuxt/app'
+import { computed, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 const route = useRoute()
+const { t } = useI18n()
 
-const nodes = ref([
+const nodes = computed(() => [
   {
     key: '0',
-    label: 'My Profile',
+    label: t('settings-my-profile'),
     children: [
       {
         key: '0-0',
-        label: 'Personal Info',
+        label: t('settings-personal-info'),
         data: '#my-profile-personal-info',
         type: 'url',
       },
       {
         key: '0-1',
-        label: 'Notifications & Alerts',
+        label: t('settings-notifications-alerts'),
         data: '#my-profile-notifications-alerts',
         type: 'url',
       },
@@ -36,25 +39,25 @@ const nodes = ref([
   },
   {
     key: '1',
-    label: 'Preferences',
+    label: t('settings-preferences'),
     children: [
       {
         key: '1-0',
-        label: 'Language & Region',
+        label: t('settings-language-region'),
         data: '#preferences-language-region',
         type: 'url',
         class: 'disabled-item',
       },
       {
         key: '1-1',
-        label: 'Entities',
+        label: t('settings-entities'),
         data: '#preferences-entities',
         type: 'url',
         class: 'disabled-item',
       },
       {
         key: '1-2',
-        label: 'Theme',
+        label: t('settings-theme'),
         data: '#preferences-theme',
         type: 'url',
       },
@@ -62,25 +65,25 @@ const nodes = ref([
   },
   {
     key: '2',
-    label: 'Data & Export',
+    label: t('settings-data-export'),
     children: [
       {
         key: '2-0',
-        label: 'Data Import',
+        label: t('settings-data-import'),
         data: '#data-import',
         type: 'url',
         class: 'disabled-item',
       },
       {
         key: '2-1',
-        label: 'Data Export',
+        label: t('settings-data-export-item'),
         data: '#data-export',
         type: 'url',
         class: 'disabled-item',
       },
       {
         key: '2-2',
-        label: 'Convert Data',
+        label: t('settings-convert-data'),
         data: '#convert-data',
         type: 'url',
         class: 'disabled-item',
