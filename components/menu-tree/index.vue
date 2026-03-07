@@ -6,7 +6,7 @@
 </template>
 
 <script setup lang="ts">
-import { checkIsStaff, sessionStorageGetItem } from 'atomic'
+import { checkIsStaff, sessionStorageGetItem } from 'nucleify'
 
 const isStaff = checkIsStaff(sessionStorageGetItem('user_role') ?? '')
 </script>

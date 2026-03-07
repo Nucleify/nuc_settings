@@ -1,4 +1,4 @@
-import type { SettingsGroupInterface } from 'atomic'
+import type { SettingsGroupInterface } from 'nucleify'
 
 export function modulesGroups(
   withCategory: boolean = false
