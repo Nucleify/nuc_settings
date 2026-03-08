@@ -15,12 +15,12 @@
 import { useRoute } from 'nuxt/app'
 import { computed } from 'vue'
 
-import { NucSettingsPreferencesTheme, NucSettingsStaffModules } from '.'
-
 import {
   NucUsersProfileNotificationsAlerts,
   NucUsersProfilePersonalInfo,
 } from 'nucleify'
+
+import { NucSettingsPreferencesTheme, NucSettingsStaffModules } from '.'
 
 const route = useRoute()
 
