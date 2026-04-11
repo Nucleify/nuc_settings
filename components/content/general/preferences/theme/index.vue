@@ -1,6 +1,6 @@
 <template>
   <nuc-color-settings-card :heading="t('settings-colors')" />
-  <hr class="settings-card-divider">
+  <hr class="settings-card-divider" />
   <nuc-chart-settings-card :heading="t('settings-charts')" />
 </template>
 

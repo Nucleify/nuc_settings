@@ -1,8 +1,6 @@
 <template>
   <ad-card class="no-content-card">
-    <template #content>
-      <p>No content</p>
-    </template>
+    <template #content> <p>No content</p> </template>
   </ad-card>
 </template>
 

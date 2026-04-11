@@ -16,9 +16,7 @@
       </div>
     </template>
 
-    <template #content>
-      <slot />
-    </template>
+    <template #content> <slot /> </template>
   </ad-card>
 </template>
 

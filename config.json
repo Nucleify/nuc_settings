@@ -1,7 +1,7 @@
 {
   "name": "nuc_settings",
   "description": "Module that contains settings functions.",
-  "version": "0.4.4",
+  "version": "0.4.5",
   "category": "core",
   "installed": true,
   "enabled": true
