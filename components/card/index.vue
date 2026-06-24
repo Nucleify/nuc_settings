@@ -21,7 +21,11 @@
 </template>
 
 <script setup lang="ts">
-import type { NucSettingsCardInterface } from './interfaces'
+import type { NucSettingsCardInterface } from 'nucleify'
 
 const props = defineProps<NucSettingsCardInterface>()
 </script>
+
+<style lang="scss">
+@import 'index';
+</style>

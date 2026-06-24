@@ -9,6 +9,7 @@
     <nuc-users-profile-notifications-alerts
       v-if="route.hash === '#my-profile-notifications-alerts'"
     />
+    <nuc-documents v-if="route.hash === '#module-nuc_documents'" />
   </div>
   <nuc-settings-staff-modules v-if="route.hash === '#modules'" />
   <nuc-modules-settings-detail
@@ -26,9 +27,9 @@ import { computed } from 'vue'
 import {
   NucUsersProfileNotificationsAlerts,
   NucUsersProfilePersonalInfo,
+  NucSettingsPreferencesTheme,
+  NucSettingsStaffModules,
 } from 'nucleify'
-
-import { NucSettingsPreferencesTheme, NucSettingsStaffModules } from '.'
 
 const route = useRoute()
 
@@ -36,6 +37,7 @@ const gridedHashes = [
   '#preferences-theme',
   '#my-profile-personal-info',
   '#my-profile-notifications-alerts',
+  '#module-nuc_documents',
 ]
 
 const gridedContent = computed(() => {

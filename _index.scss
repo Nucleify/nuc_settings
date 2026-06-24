@@ -1,33 +1,58 @@
-@import './components';
-
 #settings {
   height: 100vh;
 
   .panel-container {
-    .settings-main-card {
-      width: 100%;  
+    height: 100%;
 
-      .p-card-body {
+    .settings-main-card {
+      width: 100%;
+      height: 100%;
+
+      &.ad-card,
+      .p-card {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .p-card-body,
+      .ad-card-body {
+        flex: 1;
+        min-height: 0;
         height: 100%;
         padding: 1em;
-        overflow: scroll;
-        
+        overflow: hidden auto;
+
         .p-card-caption {
           display: none;
         }
 
-        .p-card-content {
+        .p-card-content,
+        .ad-card-content {
           height: 100%;
+          min-height: 0;
           display: flex;
           flex-direction: column;
+          gap: 1rem;
+
+          .menu-tree-container {
+            flex-shrink: 0;
+          }
 
           .settings-main-card-content {
+            flex: 1;
+            min-width: 0;
+            min-height: 0;
             display: flex;
             flex-direction: column;
             width: 100%;
             gap: 1rem;
-            overflow: scroll;
-            
+            overflow: auto;
+
+            &:has(.modules-settings-card) {
+              overflow: hidden;
+            }
+
             .settings-card {
               border: none;
               border-radius: $small-border-radius;
@@ -55,10 +80,12 @@
             display: flex;
             flex-direction: column;
             width: 100%;
+            flex: 1;
+            min-height: 0;
 
             .settings-card {
               border-radius: 0;
-            } 
+            }
           }
         }
       }
@@ -67,40 +94,31 @@
 
   @media (min-width: $md) {
     .panel-container {
-      height: 100%;
-
       .settings-main-card {
-        height: 100%;
-
-        .p-card-body {
-          .p-card-content {
-            display: flex;
+        .p-card-body,
+        .ad-card-body {
+          .p-card-content,
+          .ad-card-content {
             flex-direction: row;
+            align-items: stretch;
+            gap: 1.5rem;
+
+            .menu-tree-container {
+              width: 17rem;
+              min-width: 17rem;
+              max-height: 100%;
+              overflow-y: auto;
+            }
+
+            .settings-main-card-content {
+              overflow: auto;
+            }
           }
         }
       }
     }
   }
 }
-
-$items: (
-  'modules',
-  'theme',
-  'my-profile-personal-info',
-  'my-profile-notifications-alerts',
-);
-
-@each $item in $items {
-  ##{$item} {
-    .general-menu-tree,
-    .staff-menu-tree {
-      a[href="##{$item}"] {
-        color: $main-color-user !important;
-      }
-    }
-  }
-}
-
 
 .settings-card-divider {
   width: 100%;

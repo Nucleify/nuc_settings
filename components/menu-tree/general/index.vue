@@ -84,9 +84,8 @@ const nodes = computed(() => [
       {
         key: '2-2',
         label: t('settings-convert-data'),
-        data: '#convert-data',
+        data: '#module-nuc_documents',
         type: 'url',
-        class: 'disabled-item',
       },
     ],
   },

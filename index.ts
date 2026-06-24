@@ -1,16 +1,13 @@
-/**
- *  Module's main file export
- */
+export { default as NucSettingsPage } from './index.vue'
 export * from './nuc_settings'
 
-/**
- *  Folders exports
- */
-export * from './components'
-export * from './constants'
-export * from './types'
-
-/**
- *  Files exports
- */
-export { default as NucSettingsPage } from './index.vue'
+export { default as NucSettingsCard } from './components/card/index.vue'
+export * from './components/card/interfaces'
+export { default as NucSettingsPreferencesTheme } from './components/content/general/preferences/theme/index.vue'
+export { default as NucSettingsCardContent } from './components/content/index.vue'
+export { default as NucSettingsStaffModules } from './components/content/staff/modules/index.vue'
+export { default as NucGeneralMenuTree } from './components/menu-tree/general/index.vue'
+export { default as NucMenuTree } from './components/menu-tree/index.vue'
+export { default as NucStaffMenuTree } from './components/menu-tree/staff/index.vue'
+export * from './constants/modules'
+export * from './types/interfaces'

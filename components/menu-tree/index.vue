@@ -10,3 +10,7 @@ import { checkIsStaff, sessionStorageGetItem } from 'nucleify'
 
 const isStaff = checkIsStaff(sessionStorageGetItem('user_role') ?? '')
 </script>
+
+<style lang="scss">
+@import 'index';
+</style>

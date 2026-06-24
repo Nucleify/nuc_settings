@@ -16,3 +16,7 @@ import { useRoute } from 'nuxt/app'
 
 const route = useRoute()
 </script>
+
+<style lang="scss">
+@import 'index';
+</style>
