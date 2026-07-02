@@ -7,7 +7,7 @@
         <ad-button
           v-if="props.showButton"
           :icon="props.buttonIcon || 'prime:refresh'"
-          ad-type="main"
+          nui-type="main"
           class="refresh-button"
           rounded
           text

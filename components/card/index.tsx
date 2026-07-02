@@ -23,7 +23,7 @@ export function NucSettingsCard({
           {showButton ? (
             <AdButton
               icon={buttonIcon}
-              adType="main"
+              nuiType="main"
               className="refresh-button"
               rounded
               text

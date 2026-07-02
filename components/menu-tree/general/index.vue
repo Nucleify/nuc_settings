@@ -3,7 +3,7 @@
     <ad-heading :tag="4" :text="t('settings-general')">
       <nuc-navigation-back-button
         v-if="route.hash.includes('#module-')"
-        ad-type="main"
+        nui-type="main"
       />
     </ad-heading>
     <ad-tree :value="nodes" :expanded-keys="expandedKeys" />
