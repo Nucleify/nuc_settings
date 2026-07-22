@@ -107,6 +107,13 @@
         box-sizing: border-box;
         min-width: 0;
         overflow: visible;
+        box-shadow: none;
+        background: $content-background;
+        transition: border-color 0.15s ease;
+
+        &:hover {
+          border-color: color-mix(in srgb, $primary-color 30%, $p-card-border);
+        }
 
         &.settings-card-item {
           display: flex;
